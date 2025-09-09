@@ -13,6 +13,11 @@ from datasets import Dataset
 from ..utils.model_utils import load_model_and_tokenizer, save_model_and_tokenizer
 
 logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO, # INFO and above
+    format="%(asctime)s | %(levelname)-8s | %(name)s | %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
 
 
 class SFTTrainingPipeline:
